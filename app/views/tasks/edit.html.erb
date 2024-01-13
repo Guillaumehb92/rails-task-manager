@@ -1,0 +1,22 @@
+<h1>Edit that fucking task</h1>
+
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <br/>
+  <%= f.text_field :title %>
+  <br/>  <br/>
+    <%= f.label :details %>
+  <br/> 
+    <%= f.text_area :details %>
+  <br/>  <br/>
+    <%= f.label :completed? %>
+    <%= f.check_box :completed? %>
+  <br/>  <br/>
+
+  <%= f.submit %>
+<% end %>
+
+
+<p>
+<%= link_to "Back to list", tasks_path %>
+</p>
